@@ -70,7 +70,7 @@ RUN \
     | awk '/tag_name/{print $4;exit}' FS='[""]') && \
   curl -o \
     /tmp/sunshine.pkg.tar.zst -L \
-    "https://github.com/LizardByte/Sunshine/releases/download/${SUNSHINE_VERSION}/sunshine.pkg.tar.zst" && \
+    "https://github.com/LizardByte/Sunshine/releases/download/nightly-dev/sunshine.pkg.tar.zst" && \
   pacman -U --noconfirm /tmp/sunshine.pkg.tar.zst && \
   usermod -G input abc && \
   echo "**** steam tweaks ****" && \
