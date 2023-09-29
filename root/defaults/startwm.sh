@@ -35,8 +35,10 @@ if [ ! -d $HOME/.config/sunshine ]; then
   echo "adapter_name = ${DRINODE}" > $HOME/.config/sunshine/sunshine.conf
 fi
 
+echo "uinput" > /etc/modules-load.d/uinput.conf
+
 # Start sunshine in background
-sunshine &
+sudo sunshine &
 
 # Runtime deps
 mkdir -p $HOME/.XDG
