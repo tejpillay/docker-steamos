@@ -38,7 +38,7 @@ fi
 sudo echo "uinput" > /etc/modules-load.d/uinput.conf
 
 # Start sunshine in background
-sunshine &
+sudo sunshine &
 
 # Runtime deps
 mkdir -p $HOME/.XDG
