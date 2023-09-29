@@ -73,6 +73,7 @@ RUN \
     "https://github.com/LizardByte/Sunshine/releases/download/nightly-dev/sunshine.pkg.tar.zst" && \
   pacman -U --noconfirm /tmp/sunshine.pkg.tar.zst && \
   usermod -G input abc && \
+  echo "uinput" > /etc/modules-load.d/uinput.conf && \
   echo "**** steam tweaks ****" && \
   sed -i 's/-steamdeck//g' /usr/bin/steam && \
   echo "**** kde tweaks ****" && \
