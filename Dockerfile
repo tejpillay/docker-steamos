@@ -32,12 +32,6 @@ RUN \
     mesa-vdpau \
     vulkan-swrast && \
   echo "**** add steam repos ****" && \
-  #echo '[jupiter-staging]' >> /etc/pacman.conf && \
-  #echo 'Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch' >> /etc/pacman.conf && \
-  #echo 'SigLevel = Never' >> /etc/pacman.conf && \
-  #echo '[holo-staging]' >> /etc/pacman.conf && \
-  #echo 'Server = https://steamdeck-packages.steamos.cloud/archlinux-mirror/$repo/os/$arch' >> /etc/pacman.conf && \
-  #echo 'SigLevel = Never' >> /etc/pacman.conf && \
   pacman -Syyu --noconfirm && \
   echo "**** install packages ****" && \
   pacman -Sy --noconfirm --needed \
